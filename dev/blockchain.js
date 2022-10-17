@@ -1,0 +1,40 @@
+function Blockchain (){
+  this.chain = [];
+  this.pendingTransactions = [];
+}
+
+Blockchain.prototype.createNewBlock = function (nonce, previousBlockHash, hash){
+  const newBlock = {
+    index: this.chain.length + 1,
+    timestamp: Date.now(),
+    transactions: this.pendingTransactions,
+    nonce,
+    hash,
+    previousBlockHash
+  }
+
+  this.pendingTransactions = [];
+  this.chain.push(newBlock);
+
+  return newBlock;
+}
+
+Blockchain.prototype.getLastBlockchain = function (){
+  return this.chain[this.chain.length -1];
+}
+
+Blockchain.prototype.createNewTransaction = function (amount, sender, recipient){
+  const newTransaction = {
+    amount,
+    sender,
+    recipient
+  }
+
+  this.pendingTransactions.push(newTransaction);
+
+// return the number of the block that this transaction will be added to
+  return this.getLastBlockchain()['index'] + 1;
+}
+
+
+module.exports = Blockchain;
