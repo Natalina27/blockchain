@@ -1,8 +1,10 @@
 const Blockchain = require( './blockchain');
 
 const bitcoin = new Blockchain();
+console.log('bitcoin', bitcoin);
 
 const previousBlockHash = 'OIGTJ^&FERVHKJYU';
+
 const currentBlockData = [
   {
     amount: 10,
