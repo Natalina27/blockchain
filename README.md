@@ -1,3 +1,5 @@
+# Blockchain data structure
+
 * Blockchain.prototype.hashBlock
    > npm i sha256 --save
 
@@ -14,3 +16,10 @@
 
 > Source code
 https://github.com/erictraub/Learn-Blockchain-By-Building-Your-Own-In-JavaScript
+
+# Api - Express Js
+
+> npm i express --save
+
+to run server
+> node dev/api.js 
