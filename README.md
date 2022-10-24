@@ -12,3 +12,5 @@
 
 >// => returns to us the nonce value that creates the correct hash
 
+> Source code
+https://github.com/erictraub/Learn-Blockchain-By-Building-Your-Own-In-JavaScript
