@@ -23,3 +23,25 @@ https://github.com/erictraub/Learn-Blockchain-By-Building-Your-Own-In-JavaScript
 
 to run server
 > node dev/api.js 
+
+to restart the server automatically
+> npm i nodemon --save
+
+add in package.json:
+
+ ```json
+{
+"test": "echo \"Error: no test specified\" && exit 1",
+"start": "nodemon --watch dev -e js dev/api.js"
+}
+```
+to resolve error : TypeError: Cannot read property 'amount' of undefined
+
+> npm i body-parser --save
+
+and add to file
+```js 
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+```
