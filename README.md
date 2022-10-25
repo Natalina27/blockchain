@@ -45,3 +45,10 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 ```
+
+to create unique random string
+
+> npm i uuid --save
+```js
+const uuid = require('uuid/v1');
+```
