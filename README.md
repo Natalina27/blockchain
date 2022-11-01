@@ -51,4 +51,10 @@ to create unique random string
 > npm i uuid --save
 ```js
 const uuid = require('uuid/v1');
+const {v1: uuid} = require('uuid');
 ```
+to test in browser
+
+http://localhost:3000/blockchain
+http://localhost:3000/mine
+
